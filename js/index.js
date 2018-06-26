@@ -23,10 +23,10 @@ function loadHtml(){
         $('.a1').click(function(){
             if($(this).hasClass('right')){
                 $(this).removeClass('right').addClass('down');
-                $('.province').css('display','block');
+                $('.province').show(300);
             }else{
                 $(this).removeClass('down').addClass('right');
-                $('.province').css('display','none');
+                $('.province').hide(300);
             }
         });
 
@@ -34,10 +34,10 @@ function loadHtml(){
             $(item).click(function(){
                 if($(item).hasClass('right')){
                     $(item).removeClass('right').addClass('down');
-                    $('.city_list').eq(ind).css('display','block');
+                    $('.city_list').eq(ind).show(300);
                 }else{
                     $(item).removeClass('down').addClass('right');
-                    $('.city_list').eq(ind).css('display','none');
+                    $('.city_list').eq(ind).hide(300);
                 }
             });
         });
@@ -46,10 +46,10 @@ function loadHtml(){
             $(item).click(function(){
                 if($(item).hasClass('right')){
                     $(item).removeClass('right').addClass('down');
-                    $('.code').eq(ind).css('display','block');
+                    $('.code').eq(ind).show(300);
                 }else{
                     $(item).removeClass('down').addClass('right');
-                    $('.code').eq(ind).css('display','none');
+                    $('.code').eq(ind).hide(300);
                 }
             });
         });
