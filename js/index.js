@@ -33,10 +33,10 @@ function loadHtml(){
         $('.a1').click(function(){
             if($(this).hasClass('right')){
                 $(this).removeClass('right').addClass('down');
-                $('.province').show(300);
+                $('.province').slideDown();
             }else{
                 $(this).removeClass('down').addClass('right');
-                $('.province').hide(300);
+                $('.province').slideUp();
             }
         });
 
@@ -44,10 +44,10 @@ function loadHtml(){
             $(item).click(function(){
                 if($(item).hasClass('right')){
                     $(item).removeClass('right').addClass('down');
-                    $('.city_list').eq(ind).show(300);
+                    $('.city_list').eq(ind).slideDown();
                 }else{
                     $(item).removeClass('down').addClass('right');
-                    $('.city_list').eq(ind).hide(300);
+                    $('.city_list').eq(ind).slideUp();;
                 }
             });
         });
@@ -56,10 +56,10 @@ function loadHtml(){
             $(item).click(function(){
                 if($(item).hasClass('right')){
                     $(item).removeClass('right').addClass('down');
-                    $('.code').eq(ind).show(300);
+                    $('.code').eq(ind).slideDown();
                 }else{
                     $(item).removeClass('down').addClass('right');
-                    $('.code').eq(ind).hide(300);
+                    $('.code').eq(ind).slideUp();
                 }
             });
         });
