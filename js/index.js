@@ -1,4 +1,8 @@
 $(function(){
+    loadHtml();
+});
+
+function loadHtml(){
     $('.province_list').append(`<i class='arrow a1 right'></i>`);
     $.get('../JSON/city.json',function(data){
         let oJson = JSON.parse(data);
@@ -15,6 +19,39 @@ $(function(){
 
         $('.name').append(`<i class='arrow a3 right'></i>`);
         $('.arrow').parent().addClass('relative');
-    });
 
-});
+        $('.a1').click(function(){
+            if($(this).hasClass('right')){
+                $(this).removeClass('right').addClass('down');
+                $('.province').css('display','block');
+            }else{
+                $(this).removeClass('down').addClass('right');
+                $('.province').css('display','none');
+            }
+        });
+
+        $('.a2').each(function(ind,item){
+            $(item).click(function(){
+                if($(item).hasClass('right')){
+                    $(item).removeClass('right').addClass('down');
+                    $('.city_list').eq(ind).css('display','block');
+                }else{
+                    $(item).removeClass('down').addClass('right');
+                    $('.city_list').eq(ind).css('display','none');
+                }
+            });
+        });
+
+        $('.a3').each(function(ind,item){
+            $(item).click(function(){
+                if($(item).hasClass('right')){
+                    $(item).removeClass('right').addClass('down');
+                    $('.code').eq(ind).css('display','block');
+                }else{
+                    $(item).removeClass('down').addClass('right');
+                    $('.code').eq(ind).css('display','none');
+                }
+            });
+        });
+    });
+}

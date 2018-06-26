@@ -21,7 +21,11 @@ let server = http.createServer(function (request, response) {
             // 没有出错并且文件存在:
             console.log('200 ' + request.url);
             // 发送200响应:
-            response.writeHead(200);
+            if(request.url.includes('.css')){
+                response.writeHead(200,{'Content-type':'text/css'});
+            }else{
+                response.writeHead(200);
+            }
             // 将文件流导向response:
             fs.createReadStream(filepath).pipe(response);
         } else {
