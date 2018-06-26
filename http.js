@@ -1,3 +1,14 @@
+/*
+ * @Author: Ranran
+ * @Date: 2018-06-26 15:12:10
+ * @LastEditors: Ranran
+ * @LastEditTime: 2018-06-26 15:14:46
+ * @Description: 
+ * @Email: ranran0036@163.com
+ * @GitHub: github.com/LingsRanran
+ */
+
+console.log('update time')
 let
     fs = require('fs'),
     url = require('url'),
